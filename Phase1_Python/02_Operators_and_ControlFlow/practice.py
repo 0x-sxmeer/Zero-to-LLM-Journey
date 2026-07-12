@@ -142,6 +142,42 @@ if False and crash():
 if True or crash():
     print("This runs perfectly, the crash is ignored!")
 
+print("\n--- Advanced: Short-Circuit Assignment ---")
+# Because of short-circuiting, you can assign fallback values easily.
+# If the first value is False/Empty, it assigns the second value.
+user_input = ""
+final_name = user_input or "Anonymous_User"
+print(f"Assigned name: {final_name}")
+
+print("\n--- Advanced: Chained Comparisons ---")
+# Python allows you to chain math comparisons together like in a textbook.
+test_age = 25
+print(f"Is 18 <= 25 < 65? {18 <= test_age < 65}") # Evaluates to True
+
+print("\n--- Advanced: The Matrix Multiplication Operator (@) ---")
+# Added in Python 3.5 specifically for AI and data science (NumPy/PyTorch).
+# By default, it doesn't work on base Python lists, but here is how AI libraries use it:
+class Matrix:
+    def __init__(self, name):
+        self.name = name
+    def __matmul__(self, other):
+        return f"Multiplying Matrix {self.name} by Matrix {other.name}"
+
+A = Matrix("A")
+B = Matrix("B")
+print(f"A @ B = {A @ B}")
+
+print("\n--- Advanced: Full Bitwise Operators ---")
+# We did & (AND) and | (OR). Here are the rest:
+# XOR (^): True if only ONE is true. 5 ^ 3 = 6 (0110)
+print(f"5 ^ 3 (Bitwise XOR): {5 ^ 3}")
+# NOT (~): Inverts all bits. ~5 = -6
+print(f"~5 (Bitwise NOT): {~5}")
+# Left Shift (<<): Shifts bits left (multiplies by 2). 5 << 1 = 10 (1010)
+print(f"5 << 1 (Left Shift): {5 << 1}")
+# Right Shift (>>): Shifts bits right (divides by 2). 5 >> 1 = 2 (0010)
+print(f"5 >> 1 (Right Shift): {5 >> 1}")
+
 # ==========================================
 # YOUR CHALLENGE:
 # Write a tiny program below that asks the user for a test score (0-100).
