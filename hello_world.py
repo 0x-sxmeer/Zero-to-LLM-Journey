@@ -1,2 +1,2 @@
-print("Hello, World!")
-print("Phase 0 of the Zero-to-LLM-Journey is complete!")
+print("Hello World!")
+print("Starting my journey from zero to LLM Engineer!")
