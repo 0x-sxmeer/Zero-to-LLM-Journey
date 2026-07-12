@@ -128,3 +128,34 @@ print("\n--- Advanced: Deleting variables ---")
 massive_data = "100GB of text"
 del massive_data
 # print(massive_data) # This would now crash with a NameError!
+
+print("\n--- Advanced: Small Integer Caching (CPython Quirks) ---")
+# Python pre-loads numbers -5 to 256 to save memory.
+a = 256
+b = 256
+print(f"Is 256 the EXACT same object in RAM? {a is b}") # True
+c = 257
+d = 257
+print(f"Is 257 the EXACT same object in RAM? {c is d}") # False! Python made two separate 257s.
+
+print("\n--- Advanced: Immutability ---")
+# Strings and Integers CANNOT be changed. When you 'modify' them, Python destroys the old one.
+original_word = "hello"
+print(f"Memory address of 'hello': {id(original_word)}")
+original_word = "hello!"
+print(f"Memory address of 'hello!': {id(original_word)} (Notice it completely changed!)")
+
+print("\n--- Advanced: Garbage Collection (Reference Counting) ---")
+# Python tracks how many variables point to a memory box. When it hits 0, it deletes it.
+import sys
+shared_data = "This is a very specific string we are tracking."
+pointer_2 = shared_data
+# getrefcount() returns the true number of variables pointing to that string + 1 (for the getrefcount function itself)
+print(f"Number of pointers looking at our string: {sys.getrefcount(shared_data)}")
+
+print("\n--- Advanced: Bytes and Encoding (Pre-AI Tokens) ---")
+# AI models don't read text, they read bytes.
+# We convert strings to raw computer bytes using UTF-8 encoding.
+raw_text = "AI"
+encoded_bytes = raw_text.encode('utf-8')
+print(f"Raw text: {raw_text}. Bytes format: {encoded_bytes}. Type: {type(encoded_bytes)}")
