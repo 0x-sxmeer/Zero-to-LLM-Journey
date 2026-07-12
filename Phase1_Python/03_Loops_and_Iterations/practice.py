@@ -81,6 +81,39 @@ scores = [95, 82]
 for name, score in zip(names, scores):
     print(f"{name} got a {score}")
 
+print("\n--- Advanced: Infinite Loops with Break ---")
+# Often you don't know how long a loop will run (like a server listening for requests).
+# We use 'while True' and rely on an internal 'break' condition.
+attempts = 0
+while True:
+    attempts += 1
+    if attempts == 3:
+        print("Infinite loop broken internally!")
+        break
+
+print("\n--- Advanced: The Iteration Protocol (iter and next) ---")
+# This is what a 'for' loop actually does secretly under the hood!
+# It creates an iterator, and calls next() until it hits a StopIteration error.
+word_iterator = iter("AI")
+print(next(word_iterator)) # Prints 'A'
+print(next(word_iterator)) # Prints 'I'
+# print(next(word_iterator)) # If uncommented, this crashes with StopIteration!
+
+print("\n--- Advanced: itertools (The LLM Engineer's secret weapon) ---")
+# When nested loops get too deep, we use itertools.product to flatten them.
+import itertools
+print("Itertools Product (Flattened Nested Loop):")
+for x, y in itertools.product(range(2), range(2)):
+    print(f"x={x}, y={y}")
+
+print("\n--- Advanced: Looping Backwards ---")
+# Using reversed() is faster and cleaner than doing math with indices.
+for num in reversed(range(1, 4)):
+    print(f"{num}...")
+
+# Note: List Comprehensions, Generators (yield), and Dictionary iteration
+# are all forms of loops, but they have their own dedicated sections later on your roadmap!
+
 # ==========================================
 # YOUR CHALLENGE:
 # Write a 'while' loop below that asks the user to type the word "quit".
