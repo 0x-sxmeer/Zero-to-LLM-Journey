@@ -88,38 +88,6 @@ else:
     print(f"\nBouncer: Sorry kid. Come back in {21 - age} years.")
 
 # ==========================================
-# 5. LOOPS (while, for, break, continue)
-# ==========================================
-print("\n--- LOOPING CONTROL FLOW ---")
-
-# A. 'while' loop: keeps going as long as the condition is True.
-print("\nCounting down (while loop):")
-countdown = 3
-while countdown > 0:
-    print(f"{countdown}...")
-    countdown -= 1
-print("Go!")
-
-# B. 'for' loop: iterates over a sequence (like a list or a range of numbers)
-print("\nPrinting a range (for loop):")
-for i in range(1, 4):  # range(1, 4) gives 1, 2, 3
-    print(f"Loop iteration {i}")
-
-# C. 'break' and 'continue'
-print("\nTesting break and continue in a loop:")
-for num in range(1, 6): # 1, 2, 3, 4, 5
-    if num == 3:
-        print("Skipping 3! (continue)")
-        continue # Skips the rest of THIS iteration and goes to the next number
-    
-    if num == 5:
-        print("Hit 5! Stopping entirely. (break)")
-        break # Completely breaks out of the loop and stops it
-        
-    print(f"Processing number {num}")
-
-
-# ==========================================
 # YOUR CHALLENGE:
 # Write a tiny program below that asks the user for a test score (0-100).
 # Print "A" if it is >= 90
