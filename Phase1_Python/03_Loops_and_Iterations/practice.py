@@ -57,6 +57,30 @@ for num in range(3):
 else:
     print("Search complete. No 'break' was triggered.")
 
+print("\n--- Advanced: Python 3.10 Match/Case ---")
+# The modern, beautiful alternative to massive if/elif chains.
+status_code = 404
+match status_code:
+    case 200:
+        print("Success!")
+    case 404:
+        print("Not Found!")
+    case _:
+        print("Unknown error!") # The '_' is the default catch-all
+
+print("\n--- Advanced: Enumerate (Looping with an Index) ---")
+# When you need both the item AND its position (index) in the list.
+word_list = ["AI", "Machine Learning", "LLM"]
+for index, w in enumerate(word_list):
+    print(f"Item {index}: {w}")
+
+print("\n--- Advanced: Zip (Looping Multiple things at once) ---")
+# Combine two sequences like a zipper.
+names = ["Alice", "Bob"]
+scores = [95, 82]
+for name, score in zip(names, scores):
+    print(f"{name} got a {score}")
+
 # ==========================================
 # YOUR CHALLENGE:
 # Write a 'while' loop below that asks the user to type the word "quit".

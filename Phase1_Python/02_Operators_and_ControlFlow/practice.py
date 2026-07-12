@@ -114,6 +114,34 @@ if 10 > 5:
 # Note: Python 3.10 introduced 'match/case', which is like a super-powered if/elif.
 # We will cover that in later phases!
 
+print("\n--- Advanced: The Walrus Operator (:=) ---")
+# Added in Python 3.8. It assigns a value AND returns it at the same time!
+if (n := len(word)) > 10:
+    print(f"The word has {n} letters, which is long!")
+
+print("\n--- Advanced: Ternary Operator (One-line If/Else) ---")
+# A fast way to write an if/else on a single line
+status = "Adult" if age >= 18 else "Minor"
+print(f"Status is: {status}")
+
+print("\n--- Advanced: Bitwise Operators (&, |, ^, ~, <<, >>) ---")
+# Used for binary math (manipulating actual 1s and 0s in memory).
+# Crucial for low-level AI optimizations.
+# 5 is 0101 in binary. 3 is 0011 in binary.
+print(f"5 & 3 (Bitwise AND): {5 & 3}")  # 0001 (which is 1)
+print(f"5 | 3 (Bitwise OR): {5 | 3}")   # 0111 (which is 7)
+
+print("\n--- Advanced: Short-Circuit Logic ---")
+# Python is lazy! In 'and', if the first thing is False, it NEVER checks the second thing.
+# In 'or', if the first thing is True, it NEVER checks the second thing.
+def crash():
+    return 1 / 0  # This would crash the program!
+
+if False and crash():
+    print("This will never run, and the crash is ignored!")
+if True or crash():
+    print("This runs perfectly, the crash is ignored!")
+
 # ==========================================
 # YOUR CHALLENGE:
 # Write a tiny program below that asks the user for a test score (0-100).

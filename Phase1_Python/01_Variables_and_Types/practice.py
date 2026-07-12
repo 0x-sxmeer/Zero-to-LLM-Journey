@@ -101,3 +101,30 @@ print(f"bool(0) is: {bool(0)}")
 print(f"bool(1) is: {bool(1)}")
 print(f"bool('') is: {bool('')}")
 print(f"bool('hello') is: {bool('hello')}")
+
+print("\n--- Advanced: Type Hinting ---")
+# In modern Python (and especially AI), we use 'Type Hints' to make code readable.
+# It doesn't force the type, but it helps the IDE catch bugs.
+ai_model_name: str = "GPT-4"
+parameter_count: float = 1.76e12
+
+print("\n--- Advanced: memory addresses with id() ---")
+# Where exactly does Python store this box in RAM?
+print(f"The word '{ai_model_name}' is stored at memory address: {id(ai_model_name)}")
+
+print("\n--- Advanced: Complex Numbers ---")
+# Used heavily in advanced math and quantum computing.
+# Python uses 'j' for the imaginary part.
+complex_num = 3 + 4j
+print(f"Complex number: {complex_num}. Type: {type(complex_num)}")
+
+print("\n--- Advanced: isinstance() Check ---")
+# The professional way to check a variable's type before doing math on it.
+if isinstance(parameter_count, float):
+    print("Yes, parameter count is a float!")
+
+print("\n--- Advanced: Deleting variables ---")
+# In AI, large tensors take up huge RAM. We use 'del' to destroy the variable and free memory.
+massive_data = "100GB of text"
+del massive_data
+# print(massive_data) # This would now crash with a NameError!
