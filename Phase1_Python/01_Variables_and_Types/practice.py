@@ -1,12 +1,17 @@
 # ==========================================
 # Topic: Variables, Primitive Types, and Type Conversion
 # ==========================================
-# Think of a variable as a labeled box where you store information.
-# Python has 4 primitive (basic) types of boxes:
-# 1. str (String): Text data.
-# 2. int (Integer): Whole numbers (for math).
-# 3. float (Floating point): Decimal numbers (for precise math).
-# 4. bool (Boolean): True or False logic.
+# THE FEYNMAN CHECK (Plain English Summary)
+# - Variables: Just a labeled box in the computer's memory (RAM).
+# - str (String): Text. Always wrapped in quotes ("hello").
+# - int (Integer): A whole number (10). Used for math.
+# - float (Floating Point): A decimal number (10.5). Used for exact math.
+# - bool (Boolean): A light switch (True or False). Used for logic.
+# 
+# Naming Convention (Beginner Trap): 
+# Python professionals ALWAYS use snake_case (e.g. `my_age = 10`). 
+# Never use camelCase (`myAge = 10`) like Javascript developers do!
+# If a variable is a CONSTANT (never changes), use ALL_CAPS (`PI = 3.14`).
 # ==========================================
 
 print("--- Data Entry System ---")
@@ -66,8 +71,10 @@ print("\n--- Generating Your Profile ---")
 # ------------------------------------------
 # 5. Bringing it together with f-strings
 # ------------------------------------------
-# The 'f' at the start tells Python: "Whenever you see curly brackets {}, 
-# open the box with that name, take what's inside, and paste it here."
+# THE FEYNMAN CHECK: f-strings (Formatted Strings)
+# Before f-strings, printing variables inside text was a nightmare (e.g. "Age: " + str(age)).
+# By putting a tiny 'f' right before the quote (f"text"), you unlock magic curly brackets {}.
+# Anything inside {} gets executed as real Python code and injected into the text instantly!
 # Pro-trick: {:.2f} forces a float to round to exactly 2 decimal places!
 profile_message = f"""
 Name: {user_name}

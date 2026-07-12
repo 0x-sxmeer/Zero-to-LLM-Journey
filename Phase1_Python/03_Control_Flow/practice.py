@@ -1,6 +1,19 @@
 # ==========================================
 # Topic: Control Flow (if/elif/else, while, for, break/continue)
 # ==========================================
+# THE FEYNMAN CHECK (Plain English Summary)
+# - 'if/elif/else': A fork in the road. Choose a path based on a True/False question.
+# - 'for' loop: Use this when you know EXACTLY how many times to repeat something.
+# - 'while' loop: Use this when you want to repeat UNTIL a condition stops being true.
+# - 'break': Smash the emergency glass. Stop the loop instantly.
+# - 'continue': Skip the rest of THIS loop cycle, but keep the loop running.
+#
+# THE BEGINNER TRAP: Truthy and Falsy values
+# You don't have to write 'if age > 0:'. You can just write 'if age:'.
+# In Python, the number 0, an empty string "", empty lists [], and None are ALL "Falsy".
+# If you put them in an 'if' statement, Python treats them as False.
+# EVERYTHING else (like the number 1, or the string "hello") is "Truthy" (True).
+# ==========================================
 
 print("--- 1. IF / ELIF / ELSE ---")
 print("--- The Nightclub Bouncer Program ---")

@@ -1,11 +1,21 @@
 # ==========================================
 # Topic: Operators
 # ==========================================
-# This script demonstrates EVERY major operator in Python:
-# 1. Arithmetic (Math)
-# 2. Assignment (Changing variables)
-# 3. Comparison (Asking questions)
-# 4. Logical (Combining questions)
+# THE FEYNMAN CHECK (Plain English Summary)
+# - Arithmetic: Doing math (+, -, *, /)
+# - Assignment: Putting values into boxes (=, +=, -=)
+# - Comparison: Asking a question that results in True/False (==, >, <)
+# - Logical: Combining multiple True/False questions (and, or, not)
+# 
+# THE BEGINNER TRAP: Operator Precedence (PEMDAS / BODMAS)
+# Python strictly follows middle-school math rules!
+# 10 + 5 * 2 is NOT 30. It is 20! Python does multiplication (*) before addition (+).
+# ALWAYS use parentheses () to force the order you want: (10 + 5) * 2 = 30.
+# 
+# THE BEGINNER TRAP: Floating Point Imprecision
+# 0.1 + 0.2 does NOT equal 0.3 in Python! It equals 0.30000000000000004.
+# This happens in all languages because computers count in binary (1s and 0s)
+# and can't perfectly represent base-10 fractions. Never use '==' to compare floats!
 # ==========================================
 
 print("--- 1. ARITHMETIC OPERATORS ---")
